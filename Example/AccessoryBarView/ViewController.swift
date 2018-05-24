@@ -1,24 +1,68 @@
 //
-//  ViewController.swift
-//  AccessoryBarView
+//  AccessoryBarViewController.swift
+//  PJ-Utils
 //
-//  Created by leafarmd@gmail.com on 05/24/2018.
-//  Copyright (c) 2018 leafarmd@gmail.com. All rights reserved.
+//  Created by Rafael Damasceno on 22/05/18.
 //
-
 import UIKit
+import Foundation
+import AccessoryBarView
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textfieldSecond: UITextField!
+    
+    var accessoryBarView: AccessoryBarView = AccessoryBarView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        accessoryBarView.accessoryDelegate = self
+        accessoryBarView.setupProgressBar(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideKeyboard: true, shouldHideAccessoryView: false, textFieldDelegate: self)
+        //textField.becomeFirstResponder()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action:  #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return !accessoryBarView.hideAccessoryView
+    }
+    
+    override var inputAccessoryView: UIView {
+        get {
+            return accessoryBarView.accessoryView!
+        }
+    }
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ selectedTextField: UITextField) {
+        switch selectedTextField {
+        case textField:
+            accessoryBarView.setButtomTitle("Next")
+        case textfieldSecond:
+            accessoryBarView.setButtomTitle("Continue")
+        default:
+            break
+        }
+    }
+}
+extension ViewController: AccessoryDelegate {
+
+    func accessoryDidContinue() {
+        if textField.isFirstResponder {
+            textfieldSecond.becomeFirstResponder()
+        } else {
+            print("It Works!")
+        }
+    }
+    
+    
+}

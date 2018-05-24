@@ -1,0 +1,6 @@
+framework module AccessoryBarView {
+  umbrella header "AccessoryBarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

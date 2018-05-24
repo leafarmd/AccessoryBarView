@@ -1,0 +1,27 @@
+{
+  "name": "AccessoryBarView",
+  "version": "0.1.0",
+  "summary": "A short description of AccessoryBarView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/leafarmd@gmail.com/AccessoryBarView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "leafarmd@gmail.com": "rafael.damaceno@cwi.com.br"
+  },
+  "source": {
+    "git": "https://github.com/leafarmd@gmail.com/AccessoryBarView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "AccessoryBarView/Classes/**/*",
+  "dependencies": {
+    "InputProgress": [
+
+    ]
+  }
+}

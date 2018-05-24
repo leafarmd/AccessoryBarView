@@ -1,0 +1,23 @@
+PODS:
+  - AccessoryBarView (0.1.0):
+    - InputProgress
+  - InputProgress (1.0.0)
+
+DEPENDENCIES:
+  - AccessoryBarView (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - InputProgress
+
+EXTERNAL SOURCES:
+  AccessoryBarView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AccessoryBarView: e9def7f5e516c88509924c81a631ddb1a2709b96
+  InputProgress: dcf0c66c9ec778c40d774dc4207b694375b3c8da
+
+PODFILE CHECKSUM: c32e4a4ef1faf4e7ba31f1345a8b646c075bdb48
+
+COCOAPODS: 1.5.2
