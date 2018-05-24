@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AccessoryBarView_Example' do
+  pod 'AccessoryBarView', :path => '../'
+
+  target 'AccessoryBarView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
