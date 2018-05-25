@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accessoryBarView.accessoryDelegate = self
-        accessoryBarView.setupAccessoryBarView(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideKeyboard: true, shouldHideAccessoryView: false, textFieldDelegate: self)
+        accessoryBarView.setupAccessoryBarView(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideAccessoryView: false, textFieldDelegate: self)
         //textField.becomeFirstResponder()
     }
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     override var canBecomeFirstResponder: Bool {
-        return !accessoryBarView.hideAccessoryView
+        return true
     }
     
     override var inputAccessoryView: UIView {
