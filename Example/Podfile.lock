@@ -1,5 +1,5 @@
 PODS:
-  - AccessoryBarView (1.1.1):
+  - AccessoryBarView (1.1.2):
     - InputProgress
   - InputProgress (1.0.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AccessoryBarView: fcdd5eef6671c8974adaa1889518515723335e84
+  AccessoryBarView: b6e4bc674eef0a093b2ce623ed40f6070dec3ef4
   InputProgress: dcf0c66c9ec778c40d774dc4207b694375b3c8da
 
 PODFILE CHECKSUM: c32e4a4ef1faf4e7ba31f1345a8b646c075bdb48
