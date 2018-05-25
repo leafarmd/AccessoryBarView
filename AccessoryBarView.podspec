@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This component provides a easy way for using accessory view for the iOS keyboard. it\'s fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.
+This component provides a easy way for using accessory view for the iOS keyboard. Fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.
                        DESC
 
   s.homepage         = 'https://github.com/leafarmd/AccessoryBarView'
