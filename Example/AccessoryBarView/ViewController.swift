@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         accessoryBarView.accessoryDelegate = self
         accessoryBarView.setupAccessoryBarView(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideAccessoryView: false, textFieldDelegate: self)
-        //textField.becomeFirstResponder()
+        hideKeyboardWhenTappedAround()
     }
     
     func hideKeyboardWhenTappedAround() {
