@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/AccessoryBarView.svg?style=flat)](https://cocoapods.org/pods/AccessoryBarView)
 [![Platform](https://img.shields.io/cocoapods/p/AccessoryBarView.svg?style=flat)](https://cocoapods.org/pods/AccessoryBarView)
 
+This component provides a easy way for using accessory view for the iOS keyboard. Fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -22,7 +24,7 @@ pod 'AccessoryBarView'
 
 ## Author
 
-leafarmd@gmail.com, rafael.damaceno@cwi.com.br
+Rafael Damasceno, leafarmd@gmail.com
 
 ## License
 
