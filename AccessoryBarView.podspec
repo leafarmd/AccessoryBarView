@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AccessoryBarView'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'This component provides a easy way for using accessory view for the iOS keyboard.'
 
 # This description is used to generate tags and improve search results.
