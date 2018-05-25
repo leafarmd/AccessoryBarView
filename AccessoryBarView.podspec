@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AccessoryBarView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of AccessoryBarView.'
+  s.version          = '1.0.0'
+  s.summary          = 'This component provides a easy way for using accessory view for the iOS keyboard. it\'s fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/leafarmd@gmail.com/AccessoryBarView'
+  s.homepage         = 'https://github.com/leafarmd/AccessoryBarView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'leafarmd@gmail.com' => 'rafael.damaceno@cwi.com.br' }
-  s.source           = { :git => 'https://github.com/leafarmd@gmail.com/AccessoryBarView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/leafarmd/AccessoryBarView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
