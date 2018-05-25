@@ -48,41 +48,31 @@ open class AccessoryBarView: UIView {
         accessoryView = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 56))
         accessoryView?.isTranslucent = false
         accessoryView?.isOpaque = true
-        accessoryView?.barTintColor = UIColor.red
+        accessoryView?.barTintColor = #colorLiteral(red: 0.1607843137, green: 0.5019607843, blue: 0.7254901961, alpha: 1)
         let continueBarButton = UIBarButtonItem(customView: buttomContinue)
         accessoryView?.setItems([continueBarButton], animated: true)
     }
     
     private func setupContinueButton() {
         buttomContinue.addTarget(self, action: #selector(self.buttomContinueTouched(_:)), for: .touchUpInside)
-        buttomContinue.setTitle("Continuar", for: .normal)
+        buttomContinue.setTitle("Continue", for: .normal)
         buttomContinue.contentHorizontalAlignment = .right
         buttomContinue.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         buttomContinue.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 56)
         buttomContinue.backgroundColor = .clear
     }
     
-    public func setupProgressBar(presentedView: UIView, textFields: [UITextField], progress: CGFloat, shouldHideKeyboard: Bool = false, shouldHideAccessoryView: Bool = false, textFieldDelegate: UITextFieldDelegate) {
+    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, shouldHideKeyboard: Bool = false, shouldHideAccessoryView: Bool = false, textFieldDelegate: UITextFieldDelegate) {
         textFields.forEach{
             $0.delegate = textFieldDelegate
             $0.inputAccessoryView = accessoryView
         }
         inputProgress = InputProgress(presentingView: presentedView, textFields: textFields)
-        inputProgress?.progressBarColor = UIColor.blue
+        inputProgress?.progressBarColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1)
         inputProgress?.progressBarHeight = 8.0
         inputProgress?.progress = progress
         inputProgress?.shouldDisplayBottomViewBar = true
         self.hideAccessoryView = shouldHideAccessoryView
-    }
-    
-    open override var canBecomeFirstResponder: Bool {
-        return !hideAccessoryView
-    }
-    
-    open override var inputAccessoryView: UIView {
-        get {
-            return self.accessoryView!
-        }
     }
     
     // MARK: IBActions
