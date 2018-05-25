@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-'This component provides a easy way for using accessory view for the iOS keyboard. it\'s fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.'
+This component provides a easy way for using accessory view for the iOS keyboard. it\'s fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.
                        DESC
 
   s.homepage         = 'https://github.com/leafarmd/AccessoryBarView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'leafarmd@gmail.com' => 'rafael.damaceno@cwi.com.br' }
+  s.author           = { 'Rafael Damasceno' => 'leafarmd@gmail.com' }
   s.source           = { :git => 'https://github.com/leafarmd/AccessoryBarView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
