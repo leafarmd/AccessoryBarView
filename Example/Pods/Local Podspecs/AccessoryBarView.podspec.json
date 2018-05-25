@@ -2,7 +2,7 @@
   "name": "AccessoryBarView",
   "version": "1.0.0",
   "summary": "This component provides a easy way for using accessory view for the iOS keyboard.",
-  "description": "This component provides a easy way for using accessory view for the iOS keyboard. it's fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.",
+  "description": "This component provides a easy way for using accessory view for the iOS keyboard. Fully customizable and uses the library InputProgrees to give feedback to the user regarding his progress on an exaustive form flow.",
   "homepage": "https://github.com/leafarmd/AccessoryBarView",
   "license": {
     "type": "MIT",

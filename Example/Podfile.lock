@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AccessoryBarView: 28f6d49adfba84d23709058f728665e1eed348e1
+  AccessoryBarView: 0e79ff28514e12412c32e02343f42ec0c27a33e6
   InputProgress: dcf0c66c9ec778c40d774dc4207b694375b3c8da
 
 PODFILE CHECKSUM: c32e4a4ef1faf4e7ba31f1345a8b646c075bdb48
