@@ -62,9 +62,8 @@ open class AccessoryBarView: UIView {
         buttomContinue.backgroundColor = .clear
     }
     
-    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, shouldHideAccessoryView: Bool = false, textFieldDelegate: UITextFieldDelegate) {
+    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, shouldHideAccessoryView: Bool = false) {
         textFields.forEach{
-            $0.delegate = textFieldDelegate
             $0.inputAccessoryView = accessoryView
         }
         inputProgress = InputProgress(presentingView: presentedView, textFields: textFields)
