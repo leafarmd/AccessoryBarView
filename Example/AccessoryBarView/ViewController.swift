@@ -18,10 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         accessoryBarView.accessoryDelegate = self
-        accessoryBarView.setupAccessoryBarView(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideAccessoryView: false)
+        accessoryBarView.setupAccessoryBarView(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideAccessoryView: true)
         accessoryBarView.setButtomImage(UIImage(named: "arrow")!)
-        accessoryBarView.buttomContinue.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: -1, right: -80)
-        accessoryBarView.setButtonTitleEdgeInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         hideKeyboardWhenTappedAround()
     }
     
@@ -35,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     override var canBecomeFirstResponder: Bool {
-        return true
+        return false
     }
     
     override var inputAccessoryView: UIView {

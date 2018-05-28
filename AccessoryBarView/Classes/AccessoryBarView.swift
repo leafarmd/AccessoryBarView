@@ -16,8 +16,9 @@ open class AccessoryBarView: UIView {
     
     public init() {
         super.init(frame: UIScreen.main.bounds)
-        setupAccessoryView()
         setupContinueButton()
+        setupAccessoryView()
+        
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -34,6 +35,10 @@ open class AccessoryBarView: UIView {
     
     public func setButtomTitle(_ title: String) {
         buttomContinue.setTitle(title, for: .normal)
+    }
+    
+    public func setButtomAttributedTitle(_ attributedTitle: NSAttributedString) {
+        buttomContinue.setAttributedTitle(attributedTitle, for: .normal)
     }
     
     public func setButtonTitleFont(_ font: UIFont) {
@@ -62,18 +67,19 @@ open class AccessoryBarView: UIView {
         accessoryView?.isOpaque = true
         accessoryView?.barTintColor = #colorLiteral(red: 0.1607843137, green: 0.5019607843, blue: 0.7254901961, alpha: 1)
         let continueBarButton = UIBarButtonItem(customView: buttomContinue)
-        accessoryView?.setItems([continueBarButton], animated: true)
+        let flexibleBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        accessoryView?.setItems([flexibleBarButton, continueBarButton], animated: true)
     }
     
     private func setupContinueButton() {
         buttomContinue.addTarget(self, action: #selector(self.buttomContinueTouched(_:)), for: .touchUpInside)
-        buttomContinue.setTitle("Continue", for: .normal)
+        buttomContinue.setTitle("Continue dfsdf  f ", for: .normal)
         buttomContinue.contentHorizontalAlignment = .right
         buttomContinue.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 56)
         buttomContinue.backgroundColor = .clear
     }
     
-    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, progressBarHeight: CGFloat = 8.0, shouldDisplayBottomViewBar: Bool = false, shouldHideAccessoryView: Bool = false) {
+    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, progressBarHeight: CGFloat = 8.0, shouldDisplayBottomViewBar: Bool = true, shouldHideAccessoryView: Bool = false) {
         textFields.forEach{
             $0.inputAccessoryView = accessoryView
         }
