@@ -44,6 +44,14 @@ open class AccessoryBarView: UIView {
         buttomContinue.titleLabel?.textColor = color
     }
     
+    public func setButtomImage(_ image: UIImage) {
+        buttomContinue.setImage(image, for: .normal)
+    }
+    
+    public func setButtomImageEdgeInsets(_ imageEdgeInsets: UIEdgeInsets) {
+        buttomContinue.imageEdgeInsets = imageEdgeInsets
+    }
+    
     private func setupAccessoryView() {
         accessoryView = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 56))
         accessoryView?.isTranslucent = false
