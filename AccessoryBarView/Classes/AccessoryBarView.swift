@@ -44,7 +44,7 @@ open class AccessoryBarView: UIView {
         buttomContinue.titleLabel?.textColor = color
     }
     
-    public func setButtomImage(_ image: UIImage) {
+    public func setButtomImage(_ image: UIImage?) {
         buttomContinue.setImage(image, for: .normal)
     }
     
