@@ -44,6 +44,10 @@ open class AccessoryBarView: UIView {
         buttomContinue.titleLabel?.textColor = color
     }
     
+    public func setButtonTitleEdgeInsets(_ titleEdgeInsets: UIEdgeInsets) {
+        buttomContinue.titleEdgeInsets = titleEdgeInsets
+    }
+    
     public func setButtomImage(_ image: UIImage?) {
         buttomContinue.setImage(image, for: .normal)
     }
@@ -65,7 +69,6 @@ open class AccessoryBarView: UIView {
         buttomContinue.addTarget(self, action: #selector(self.buttomContinueTouched(_:)), for: .touchUpInside)
         buttomContinue.setTitle("Continue", for: .normal)
         buttomContinue.contentHorizontalAlignment = .right
-        buttomContinue.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         buttomContinue.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 56)
         buttomContinue.backgroundColor = .clear
     }
