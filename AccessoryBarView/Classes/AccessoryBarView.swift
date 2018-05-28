@@ -62,7 +62,7 @@ open class AccessoryBarView: UIView {
         buttomContinue.backgroundColor = .clear
     }
     
-    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, shouldHideAccessoryView: Bool = false) {
+    public func setupAccessoryBarView(presentedView: UIView, textFields: [UITextField], progress: CGFloat = 0.0, progressBarHeight: CGFloat = 8.0, shouldDisplayBottomViewBar: Bool = false, shouldHideAccessoryView: Bool = false) {
         textFields.forEach{
             $0.inputAccessoryView = accessoryView
         }
@@ -70,7 +70,7 @@ open class AccessoryBarView: UIView {
         inputProgress?.progressBarColor = #colorLiteral(red: 0.1803921569, green: 0.8, blue: 0.4431372549, alpha: 1)
         inputProgress?.progressBarHeight = 8.0
         inputProgress?.progress = progress
-        inputProgress?.shouldDisplayBottomViewBar = true
+        inputProgress?.shouldDisplayBottomViewBar = shouldDisplayBottomViewBar
         self.hideAccessoryView = shouldHideAccessoryView
     }
     
