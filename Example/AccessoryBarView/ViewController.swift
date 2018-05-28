@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         accessoryBarView.accessoryDelegate = self
         accessoryBarView.setupAccessoryBarView(presentedView: self.view, textFields: [textField, textfieldSecond], progress: 0.5, shouldHideAccessoryView: false)
+        accessoryBarView.setButtomImage(UIImage(named: "arrow")!)
+        accessoryBarView.buttomContinue.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -80)
         hideKeyboardWhenTappedAround()
     }
     
