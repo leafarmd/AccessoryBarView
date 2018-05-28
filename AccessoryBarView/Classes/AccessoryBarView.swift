@@ -55,6 +55,7 @@ open class AccessoryBarView: UIView {
     
     public func setButtomImage(_ image: UIImage?) {
         buttomContinue.setImage(image, for: .normal)
+        buttomContinue.setImage(image, for: .selected)
     }
     
     public func setButtomImageEdgeInsets(_ imageEdgeInsets: UIEdgeInsets) {
