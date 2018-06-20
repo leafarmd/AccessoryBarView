@@ -33,7 +33,8 @@ class ViewController: UIViewController {
     }
     
     override var canBecomeFirstResponder: Bool {
-        return false
+        return true
+        
     }
     
     override var inputAccessoryView: UIView {

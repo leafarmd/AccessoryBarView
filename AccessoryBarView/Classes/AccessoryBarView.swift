@@ -74,7 +74,7 @@ open class AccessoryBarView: UIView {
     
     private func setupContinueButton() {
         buttomContinue.addTarget(self, action: #selector(self.buttomContinueTouched(_:)), for: .touchUpInside)
-        buttomContinue.setTitle("Continue dfsdf  f ", for: .normal)
+        buttomContinue.setTitle("Next ", for: .normal)
         buttomContinue.contentHorizontalAlignment = .right
         buttomContinue.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 56)
         buttomContinue.backgroundColor = .clear
